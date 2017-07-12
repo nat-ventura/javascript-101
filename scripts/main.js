@@ -84,23 +84,24 @@
 
 function leetMeBro(lilString) {
     var leetNums = "4361057"
-    var leetable = "AEGIOST"
+    var regularLetters = "AEGIOST"
     var leeted = ""
-    var found = false;
     lilString = lilString.toUpperCase()
 
-    while (found != true);
-        for (i = 0; i < lilString.length; i++) {
-            for (j = 0; j < leetable.length; j++) {
-                if (lilString[i] == leetable[j]) {
-                    leeted = leeted + leetNums[j];
-                    found = true;
-                } else {
-                    leeted = leeted + lilString[i];
-                    found = true;
+    for (word in lilString) {
+        for (i=0; i < word.length; i++) {
+            if (word[i] in regularLetters) {
+                for (j=0; j < leetNums.length; j++) {
+                    if (word[i] == regularLetters[j]) {
+                        leeted = leeted + leetNums[j];
+                    }
                 }
+            } else {
+                leeted = leeted + word[i];
             }
         }
+    }
+    return leeted;
 }
 
-console.log(leetMeBro("hehehe what's up tools"))
+console.log(leetMeBro("string"));
