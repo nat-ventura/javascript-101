@@ -65,17 +65,42 @@
 
 // TIP CALCULATOR THREE
 
-function splitAmount(bill, service, guests) {
-    var total = 0;
-    if (service == 'good') {
-        total = 0.2 * bill + bill;
-    } else if (service == 'fair') {
-        total = 0.15 * bill + bill;
-    } else if (service == 'poor') {
-        total = 0.1 * bill + bill;
-    }
-    var guestBill = total / guests;
-    return guestBill;
+// function splitAmount(bill, service, guests) {
+//     var total = 0;
+//     if (service == 'good') {
+//         total = 0.2 * bill + bill;
+//     } else if (service == 'fair') {
+//         total = 0.15 * bill + bill;
+//     } else if (service == 'poor') {
+//         total = 0.1 * bill + bill;
+//     }
+//     var guestBill = total / guests;
+//     return guestBill;
+// }
+
+// console.log(splitAmount(40, 'fair', 2));
+
+// LEETSPEAK
+
+function leetMeBro(lilString) {
+    var leetNums = "4361057"
+    var leetable = "AEGIOST"
+    var leeted = ""
+    var found = false;
+    lilString = lilString.toUpperCase()
+
+    while (found != true);
+        for (i = 0; i < lilString.length; i++) {
+            for (j = 0; j < leetable.length; j++) {
+                if (lilString[i] == leetable[j]) {
+                    leeted = leeted + leetNums[j];
+                    found = true;
+                } else {
+                    leeted = leeted + lilString[i];
+                    found = true;
+                }
+            }
+        }
 }
 
-console.log(splitAmount(40, 'fair', 2));
+console.log(leetMeBro("hehehe what's up tools"))
