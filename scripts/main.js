@@ -1,5 +1,8 @@
 var name = "little dog";
 
-var dog;
+var greeting = ("Hello " + name + "!");
 
-console.log("Hello", name + "!");
+// if you don't use var, a global variable is declared
+
+console.log(greeting);
+console.log("The length is", greeting.length + ".");
