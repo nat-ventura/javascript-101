@@ -103,9 +103,12 @@
 // PRINT A SQUARE
 
 function printSquare(size) {
-    
+    for (var j=0; j < size; j++) {
+        console.log("*".repeat(size));
+    }
 }
 
+printSquare(5);
 
 // LEETSPEAK
 
