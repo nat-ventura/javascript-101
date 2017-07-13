@@ -114,7 +114,7 @@
 
 function printBox(width, height) {
     console.log("hello");
-    for (var i = width; i < height; i++) {
+    for (var i = 0; i < height + 1; i++) {
         if (i == 0 || i == height) {
             console.log("*".repeat(width));
         } else {
