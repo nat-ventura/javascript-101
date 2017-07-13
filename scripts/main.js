@@ -173,21 +173,53 @@
 
 // factors(12);
 
-// CAESAR CIPHER
+// tip again
+
+// if (!serviceLevel) {
+//     serviceLevel = 'good';
+// }
+// serviceLevel = serviceLevel || 'good';
+// }
+
+// function tipAmount(bill, service) {
+//     // if (!serviceLevel) {
+//     //     throw new Error('Value Error: pls pass in a string as service level');
+//     // }
+//     // here we're creating an error-- bein noisy, which is good
+
+//     var tip = 0;
+//     var serviceLevels = {
+//         'good': .2,
+//         'fair': .15,
+//         'bad': .1,
+//         'poor': .05
+//     }
+
+// }
+
+// // CAESAR CIPHER
 
 function cipher(string, offset) {
-    alphabet = "abcdefghijklmnopqrstuvwxyz";
-    ciphered = "";
-    for (i=0; i < string.length; i++) {
-        for (j=0; j < alphabet.length; j++){
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var ciphered = "";
+    for (var i=0; i < string.length; i++) {
+        for (var j=0; j < alphabet.length; j++){
             if (string[i] == alphabet[j]) {
-                
+                if (j + offset > 26) {
+                    ciphered = ciphered + alphabet[(j + offset) % 26];
+                } else if (j - offset < 0) {
+                    ciphered = ciphered + alphabet[26 + (j - offset)];
+                } else {
+                    ciphered = ciphered + alphabet[j];
+                }
+            } else {
+                ciphered = ciphered + string[i];
             }
         }
-        
     }
-
 }
+
+console.log(cipher("i'm so fun", 4))
 
 // LEETSPEAK
 
