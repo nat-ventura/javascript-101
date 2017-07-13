@@ -144,11 +144,30 @@
 function factors(bigNum) {
     var factorList = [1, bigNum];
     if (bigNum % 2 == 0) {
-        factorList.push(2, bigNum/2)
+        factorList.push(2);
+        var fact = bigNum / 2;
+        while (fact > 2) {
+            factorList.push(fact);
+            fact = fact / 2;
+        }
+    } else if (bigNum % 3 == 0) {
+        factorList.push(3);
+        var fact = bigNum / 3;
+        while (fact > 3) {
+            factorList.push(fact);
+            fact = fact / 3;
+        }
     }
-    if (bigNum % 3 == 0) {
-        factorList.push(3, bigNum/3)
+    // var i = 1;
+    // while (i < factorList.length) {
+    //     var j = i;
+    //     while (j > 0 && factorList[j] < factorList[j-1]) {
+    //         factorList[j], factorList[j-1] = factorList[j-1], factorList[j];
+    //         j += 1;
+    //     }
+    //     i += 1;
     }
+
     console.log(factorList);
 }
 
