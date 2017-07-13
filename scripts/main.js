@@ -127,17 +127,32 @@
 
 //  PRINT A BANNER
 
-function printBanner(text) {
-    for (i=0; i < 4; i++) {
-        if (i == 0 || i == 3) {
-            console.log("*".repeat(text.length + 4));
-        } else if (i == 2) {
-            console.log("* " + text + " *");
-        }
+// function printBanner(text) {
+//     for (i=0; i < 4; i++) {
+//         if (i == 0 || i == 3) {
+//             console.log("*".repeat(text.length + 4));
+//         } else if (i == 2) {
+//             console.log("* " + text + " *");
+//         }
+//     }
+// }
+
+// printBanner("myellow this is my banner");
+
+// FACTOR A NUMBER
+
+function factors(bigNum) {
+    var factorList = [1, bigNum];
+    if (bigNum % 2 == 0) {
+        factorList.push(2, bigNum/2)
     }
+    if (bigNum % 3 == 0) {
+        factorList.push(3, bigNum/3)
+    }
+    console.log(factorList);
 }
 
-printBanner("myellow this is my banner");
+factors(12);
 
 // LEETSPEAK
 
