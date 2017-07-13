@@ -199,28 +199,31 @@
 
 // // CAESAR CIPHER
 
-function cipher(string, offset) {
-    var alphabet = "abcdefghijklmnopqrstuvwxyz";
-    var ciphered = "";
-    for (var i=0; i < string.length; i++) {
-        for (var j=0; j < alphabet.length; j++) {
-            if (string[i] == alphabet[j]) {
-                if (j + offset > 26) {
-                    ciphered = ciphered + alphabet[(j + offset) % 26];
-                } else if (j + offset < 0) {
-                    ciphered = ciphered + alphabet[26 + (j - offset)];
-                } else {
-                    ciphered = ciphered + alphabet[j + offset];
-                }
-            } else if (string[i] == " ") {
-                ciphered = ciphered + " ";
-            }
-        }
-    }
-    return ciphered;
-}
+// function cipher(string, offset) {
+//     var alphabet = "abcdefghijklmnopqrstuvwxyz";
+//     var ciphered = "";
+//     var done = false;
+//     while (!done) {
+//         for (var i=0; i < alphabet.length; i++) {
+//             if (string[i] == alphabet[j]) {
+//                 if (j + offset > 26) {
+//                     ciphered = ciphered + alphabet[(j + offset) % 26];
+//                 } else if (j + offset < 0) {
+//                     ciphered = ciphered + alphabet[26 + (j - offset)];
+//                 } else {
+//                     ciphered = ciphered + alphabet[j + offset];
+//                     i++;
+//                 }
+//             } else if (string[i] == " ") {
+//                 ciphered = ciphered + " ";
+//                 i++;
+//             }
+//         }
+//     }
+//     return ciphered;
+// }
 
-console.log(cipher("i'm so fun", 4))
+// console.log(cipher("i'm so fun", 4))
 
 // LEETSPEAK
 
@@ -230,10 +233,10 @@ console.log(cipher("i'm so fun", 4))
 //     var leeted = ""
 //     lilString = lilString.toUpperCase()
 
-//     for (word in lilString) {
-//         for (i=0; i < word.length; i++) {
+//     for (var word in lilString) {
+//         for (var i=0; i < word.length; i++) {
 //             if (word[i] in regularLetters) {
-//                 for (j=0; j < leetNums.length; j++) {
+//                 for (var j=0; j < leetNums.length; j++) {
 //                     if (word[i] == regularLetters[j]) {
 //                         leeted = leeted + leetNums[j];
 //                     }
