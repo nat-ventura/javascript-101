@@ -112,18 +112,32 @@
 
 // PRINT A BOX
 
-function printBox(width, height) {
-    console.log("hello");
-    for (var i = 0; i < height + 1; i++) {
-        if (i == 0 || i == height) {
-            console.log("*".repeat(width));
-        } else {
-            console.log("*" + " ".repeat(width - 2) + "*");
+// function printBox(width, height) {
+//     console.log("hello");
+//     for (var i = 0; i < height + 2; i++) {
+//         if (i == 0 || i == height + 1) {
+//             console.log("*".repeat(width));
+//         } else {
+//             console.log("*" + " ".repeat(width - 2) + "*");
+//         }
+//     }
+// }
+
+// printBox(5, 7);
+
+//  PRINT A BANNER
+
+function printBanner(text) {
+    for (i=0; i < 4; i++) {
+        if (i == 0 || i == 3) {
+            console.log("*".repeat(text.length + 4));
+        } else if (i == 2) {
+            console.log("* " + text + " *");
         }
     }
 }
 
-printBox(6, 4);
+printBanner("myellow this is my banner");
 
 // LEETSPEAK
 
