@@ -141,37 +141,53 @@
 
 // FACTOR A NUMBER
 
-function factors(bigNum) {
-    var factorList = [1, bigNum];
-    if (bigNum % 2 == 0) {
-        factorList.push(2);
-        var fact = bigNum / 2;
-        while (fact > 2) {
-            factorList.push(fact);
-            fact = fact / 2;
+// function factors(bigNum) {
+//     var factorList = [1, bigNum];
+//     if (bigNum % 2 == 0) {
+//         factorList.push(2);
+//         var fact = bigNum / 2;
+//         while (fact > 2) {
+//             factorList.push(fact);
+//             fact = fact / 2;
+//         }
+//     } else if (bigNum % 3 == 0) {
+//         factorList.push(3);
+//         var fact = bigNum / 3;
+//         while (fact > 3) {
+//             factorList.push(fact);
+//             fact = fact / 3;
+//         }
+//     }
+//     // var i = 1;
+//     // while (i < factorList.length) {
+//     //     var j = i;
+//     //     while (j > 0 && factorList[j] < factorList[j-1]) {
+//     //         factorList[j], factorList[j-1] = factorList[j-1], factorList[j];
+//     //         j += 1;
+//     //     }
+//     //     i += 1;
+//     }
+
+//     console.log(factorList);
+// }
+
+// factors(12);
+
+// CAESAR CIPHER
+
+function cipher(string, offset) {
+    alphabet = "abcdefghijklmnopqrstuvwxyz";
+    ciphered = "";
+    for (i=0; i < string.length; i++) {
+        for (j=0; j < alphabet.length; j++){
+            if (string[i] == alphabet[j]) {
+                
+            }
         }
-    } else if (bigNum % 3 == 0) {
-        factorList.push(3);
-        var fact = bigNum / 3;
-        while (fact > 3) {
-            factorList.push(fact);
-            fact = fact / 3;
-        }
-    }
-    // var i = 1;
-    // while (i < factorList.length) {
-    //     var j = i;
-    //     while (j > 0 && factorList[j] < factorList[j-1]) {
-    //         factorList[j], factorList[j-1] = factorList[j-1], factorList[j];
-    //         j += 1;
-    //     }
-    //     i += 1;
+        
     }
 
-    console.log(factorList);
 }
-
-factors(12);
 
 // LEETSPEAK
 
