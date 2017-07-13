@@ -80,28 +80,48 @@
 
 // console.log(splitAmount(40, 'fair', 2));
 
-// LEETSPEAK
+// PRINT NUMBERS
 
-function leetMeBro(lilString) {
-    var leetNums = "4361057"
-    var regularLetters = "AEGIOST"
-    var leeted = ""
-    lilString = lilString.toUpperCase()
-
-    for (word in lilString) {
-        for (i=0; i < word.length; i++) {
-            if (word[i] in regularLetters) {
-                for (j=0; j < leetNums.length; j++) {
-                    if (word[i] == regularLetters[j]) {
-                        leeted = leeted + leetNums[j];
-                    }
-                }
-            } else {
-                leeted = leeted + word[i];
-            }
-        }
+function printNumbersOne(start, end) {
+    for (i=start; i < end; i++) {
+        console.log(i);
     }
-    return leeted;
 }
 
-console.log(leetMeBro("string"));
+function printNumbersTwo(start, end) {
+    i = start;
+    while (i < end) {
+        console.log(i);
+        i++;
+    }
+}
+
+printNumbersOne(1,10);
+printNumbersTwo(1,10);
+
+
+// LEETSPEAK
+
+// function leetMeBro(lilString) {
+//     var leetNums = "4361057"
+//     var regularLetters = "AEGIOST"
+//     var leeted = ""
+//     lilString = lilString.toUpperCase()
+
+//     for (word in lilString) {
+//         for (i=0; i < word.length; i++) {
+//             if (word[i] in regularLetters) {
+//                 for (j=0; j < leetNums.length; j++) {
+//                     if (word[i] == regularLetters[j]) {
+//                         leeted = leeted + leetNums[j];
+//                     }
+//                 }
+//             } else {
+//                 leeted = leeted + word[i];
+//             }
+//         }
+//     }
+//     return leeted;
+// }
+
+// console.log(leetMeBro("string"));
