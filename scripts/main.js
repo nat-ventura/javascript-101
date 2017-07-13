@@ -102,13 +102,28 @@
 
 // PRINT A SQUARE
 
-function printSquare(size) {
-    for (var j=0; j < size; j++) {
-        console.log("*".repeat(size));
+// function printSquare(size) {
+//     for (var j=0; j < size; j++) {
+//         console.log("*".repeat(size));
+//     }
+// }
+
+// printSquare(5);
+
+// PRINT A BOX
+
+function printBox(width, height) {
+    console.log("hello");
+    for (var i = width; i < height; i++) {
+        if (i == 0 || i == height) {
+            console.log("*".repeat(width));
+        } else {
+            console.log("*" + " ".repeat(width - 2) + "*");
+        }
     }
 }
 
-printSquare(5);
+printBox(6, 4);
 
 // LEETSPEAK
 
