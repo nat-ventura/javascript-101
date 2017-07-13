@@ -82,22 +82,29 @@
 
 // PRINT NUMBERS
 
-function printNumbersOne(start, end) {
-    for (i=start; i < end; i++) {
-        console.log(i);
-    }
-}
+// function printNumbersOne(start, end) {
+//     console.log("print numer one!")
+//     for (var i=start; i < end + 1; i++) {
+//         console.log(i);
+//     }
+// }
 
-function printNumbersTwo(start, end) {
-    i = start;
-    while (i < end) {
-        console.log(i);
-        i++;
-    }
-}
+// function printNumbersTwo(start, end) {
+//     var i = start;
+//     while (i < end + 1) {
+//         console.log(i);
+//         i++;
+//     }
+// }
 
-printNumbersOne(1,10);
-printNumbersTwo(1,10);
+// printNumbersOne(1,10);
+// printNumbersTwo(1,10);
+
+// PRINT A SQUARE
+
+function printSquare(size) {
+    
+}
 
 
 // LEETSPEAK
