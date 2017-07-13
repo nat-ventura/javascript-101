@@ -203,20 +203,21 @@ function cipher(string, offset) {
     var alphabet = "abcdefghijklmnopqrstuvwxyz";
     var ciphered = "";
     for (var i=0; i < string.length; i++) {
-        for (var j=0; j < alphabet.length; j++){
+        for (var j=0; j < alphabet.length; j++) {
             if (string[i] == alphabet[j]) {
                 if (j + offset > 26) {
                     ciphered = ciphered + alphabet[(j + offset) % 26];
-                } else if (j - offset < 0) {
+                } else if (j + offset < 0) {
                     ciphered = ciphered + alphabet[26 + (j - offset)];
                 } else {
-                    ciphered = ciphered + alphabet[j];
+                    ciphered = ciphered + alphabet[j + offset];
                 }
-            } else {
-                ciphered = ciphered + string[i];
+            } else if (string[i] == " ") {
+                ciphered = ciphered + " ";
             }
         }
     }
+    return ciphered;
 }
 
 console.log(cipher("i'm so fun", 4))
