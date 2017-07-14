@@ -69,12 +69,44 @@ var nums = [-1,2,-3,-4,5,-6,7,-8,-9,-10];
 
 // console.log(evies);
 
-var squares = [];
+// var squares = [];
 
-function square(n) {
-    return n * n;
-}
+// function square(n) {
+//     return n * n;
+// }
 
-var squares = nums.map(square);
+// var squares = nums.map(square);
 
-console.log(squares);
+// console.log(squares);
+
+var cities = [
+  { name: 'Los Angeles', temperature: 60.0},
+  { name: 'Atlanta', temperature: 52.0 },
+  { name: 'Detroit', temperature: 48.0 },
+  { name: 'New York', temperature: 80.0 }
+];
+
+// var coldCities = [];
+
+// function isCold(city) {
+//     // if (city["temperature"] < 70.0) {
+//     //     return true;
+//     // }
+
+//     // return city["temperature"] < 70.0 
+
+// }
+
+var coldCities = cities.filter((city) => {
+    return city["temperature"] < 70.0;
+});
+
+
+[1,2,3,4,5,6,7].forEach((num) =>{
+        console.log("my number is "+num)
+        if (num == 4){
+            console.log("hasjhdgahsgdjhagsjdhgasjhdg")
+        }
+});
+
+console.log(coldCities);
