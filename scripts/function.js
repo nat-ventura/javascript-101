@@ -61,10 +61,20 @@ var nums = [-1,2,-3,-4,5,-6,7,-8,-9,-10];
 
 // console.log(positivos);
 
-var evies = nums.filter(function(num) {
-    if (num % 2 == 0) {
-        return true;
-    }
-});
+// var evies = nums.filter(function(num) {
+//     if (num % 2 == 0) {
+//         return true;
+//     }
+// });
 
-console.log(evies);
+// console.log(evies);
+
+var squares = [];
+
+function square(n) {
+    return n * n;
+}
+
+var squares = nums.map(square);
+
+console.log(squares);
