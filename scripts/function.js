@@ -97,16 +97,32 @@ var cities = [
 
 // }
 
-var coldCities = cities.filter((city) => {
-    return city["temperature"] < 70.0;
+// var coldCities = cities.filter((city) => {
+//     return city["temperature"] < 70.0;
+// });
+
+// var cityNames = cities.map(function(city) {
+//     return city["name"];
+// });
+
+// [1,2,3,4,5,6,7].forEach((num) =>{
+//         console.log("my number is "+num)
+//         if (num == 4){
+//             console.log("hasjhdgahsgdjhagsjdhgasjhdg")
+//         }
+// });
+
+// console.log(coldCities);
+
+var cities = [
+  { name: 'Los Angeles', temperature: 60.0},
+  { name: 'Atlanta', temperature: 52.0 },
+  { name: 'Detroit', temperature: 48.0 },
+  { name: 'New York', temperature: 80.0 }
+];
+
+var cityNames = cities.map(function(city) {
+    return city["name"];
 });
 
-
-[1,2,3,4,5,6,7].forEach((num) =>{
-        console.log("my number is "+num)
-        if (num == 4){
-            console.log("hasjhdgahsgdjhagsjdhgasjhdg")
-        }
-});
-
-console.log(coldCities);
+console.log(cityNames);
