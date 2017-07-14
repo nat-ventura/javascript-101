@@ -22,16 +22,31 @@
 // addContact(phonebookDict, 'Kareem', '938-489-1234');
 // deleter(phonebookDict, 'Alice');
 
-function letterHistogram(string) {
-    bigDict = {}
-    for (i=0; i < string.length; i++) {
-        if (string[i] in bigDict) {
-            bigDict[string[i]] += 1;
+// function letterHistogram(string) {
+//     bigDict = {}
+//     for (i=0; i < string.length; i++) {
+//         if (string[i] in bigDict) {
+//             bigDict[string[i]] += 1;
+//         } else {
+//             bigDict[string[i]] = 1;
+//         }
+//     }
+//     return bigDict;
+// }
+
+// console.log(letterHistogram("trashcompactorhasishseller"));
+
+function wordHistogram(string) {
+    hist = {}
+    splits = string.split(" ")
+    for (i=0; i < splits.length; i++) {
+        if (splits[i] in hist) {
+            hist[splits[i]] += 1;
         } else {
-            bigDict[string[i]] = 1;
+            hist[splits[i]] = 1;
         }
     }
-    return bigDict;
+    return hist;
 }
 
-console.log(letterHistogram("trashcompactorhasishseller"));
+console.log(wordHistogram("Hold up, they don't love you like I love you \nSlow down, they don't love you like I love you\nBack up, they don't love you like I love you"));
