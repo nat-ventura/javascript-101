@@ -79,12 +79,12 @@ var nums = [-1,2,-3,-4,5,-6,7,-8,-9,-10];
 
 // console.log(squares);
 
-var cities = [
-  { name: 'Los Angeles', temperature: 60.0},
-  { name: 'Atlanta', temperature: 52.0 },
-  { name: 'Detroit', temperature: 48.0 },
-  { name: 'New York', temperature: 80.0 }
-];
+// var cities = [
+//   { name: 'Los Angeles', temperature: 60.0},
+//   { name: 'Atlanta', temperature: 52.0 },
+//   { name: 'Detroit', temperature: 48.0 },
+//   { name: 'New York', temperature: 80.0 }
+// ];
 
 // var coldCities = [];
 
@@ -114,15 +114,48 @@ var cities = [
 
 // console.log(coldCities);
 
-var cities = [
-  { name: 'Los Angeles', temperature: 60.0},
-  { name: 'Atlanta', temperature: 52.0 },
-  { name: 'Detroit', temperature: 48.0 },
-  { name: 'New York', temperature: 80.0 }
-];
+// var cities = [
+//   { name: 'Los Angeles', temperature: 60.0},
+//   { name: 'Atlanta', temperature: 52.0 },
+//   { name: 'Detroit', temperature: 48.0 },
+//   { name: 'New York', temperature: 80.0 }
+// ];
 
-var cityNames = cities.map(function(city) {
-    return city["name"];
-});
+// var cityNames = cities.map(function(city) {
+//     return city["name"];
+// });
 
-console.log(cityNames);
+// console.log(cityNames);
+
+// var people = [
+//   'Dom',
+//   'Lyn',
+//   'Kirk',
+//   'Autumn',
+//   'Trista',
+//   'Jesslyn',
+//   'Kevin',
+//   'John',
+//   'Eli',
+//   'Juan',
+//   'Robert',
+//   'Keyur',
+//   'Jason',
+//   'Che',
+//   'Ben'
+// ];
+
+// people.forEach((person) => {
+//     console.log("Good Job " + person + "!");
+// })
+
+function fun() {
+    console.log("Hello, world!");
+}
+
+// function call3Times(fun) {
+//     fun();
+//     fun();
+//     fun();
+// }
+
