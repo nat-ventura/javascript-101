@@ -52,24 +52,19 @@
 // console.log(wordHistogram("banana keys banana boat"));
 
 var nums = [-1,2,-3,-4,5,-6,7,-8,-9,-10];
-// var positivos = [];
 
-// function posi(num) {
+// var positivos = nums.filter(function(num) {
 //     if (num > 0) {
-//         return num;
-//     }
-// }
-
-// nums.forEach(function(num) {
-//     if (num > 0) {
-//         positivos.push(num)
+//         return true;
 //     }
 // });
 
-var positivos = nums.filter(function(num) {
-    if (num > 0) {
+// console.log(positivos);
+
+var evies = nums.filter(function(num) {
+    if (num % 2 == 0) {
         return true;
     }
 });
 
-console.log(positivos);
+console.log(evies);
