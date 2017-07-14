@@ -34,3 +34,4 @@ function letterHistogram(string) {
     return bigDict;
 }
 
+console.log(letterHistogram("trashcompactorhasishseller"));
