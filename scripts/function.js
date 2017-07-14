@@ -36,17 +36,40 @@
 
 // console.log(letterHistogram("trashcompactorhasishseller"));
 
-function wordHistogram(string) {
-    hist = {}
-    splits = string.split(" ")
-    for (i=0; i < splits.length; i++) {
-        if (splits[i] in hist) {
-            hist[splits[i]] += 1;
-        } else {
-            hist[splits[i]] = 1;
-        }
-    }
-    return hist;
-}
+// function wordHistogram(string) {
+//     hist = {}
+//     splits = string.split(" ")
+//     for (i=0; i < splits.length; i++) {
+//         if (splits[i] in hist) {
+//             hist[splits[i]] += 1;
+//         } else {
+//             hist[splits[i]] = 1;
+//         }
+//     }
+//     return hist;
+// }
 
-console.log(wordHistogram("Hold up, they don't love you like I love you \nSlow down, they don't love you like I love you\nBack up, they don't love you like I love you"));
+// console.log(wordHistogram("banana keys banana boat"));
+
+var nums = [-1,2,-3,-4,5,-6,7,-8,-9,-10];
+// var positivos = [];
+
+// function posi(num) {
+//     if (num > 0) {
+//         return num;
+//     }
+// }
+
+// nums.forEach(function(num) {
+//     if (num > 0) {
+//         positivos.push(num)
+//     }
+// });
+
+var positivos = nums.filter(function(num) {
+    if (num > 0) {
+        return true;
+    }
+});
+
+console.log(positivos);
