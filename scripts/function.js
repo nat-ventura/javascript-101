@@ -161,10 +161,18 @@ function fun() {
 
 // call3Times(fun);
 
-function callNTimes(times, fun) {
-    for (i=0; i < times; i++) {
-        fun();
-    }
+// function callNTimes(times, fun) {
+//     for (i=0; i < times; i++) {
+//         fun();
+//     }
+// }
+
+// console.log(callNTimes(6, fun));
+
+function product(array) {
+    array.filter( function(num) {
+        return array[num] * array[num - 1]
+    });
 }
 
-console.log(callNTimes(6, fun));
+console.log(product([1,2,3]));
