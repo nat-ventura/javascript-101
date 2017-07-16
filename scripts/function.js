@@ -153,10 +153,18 @@ function fun() {
     console.log("Hello, world!");
 }
 
-function call3Times(fun) {
-    fun();
-    fun();
-    fun();
+// function call3Times(fun) {
+//     fun();
+//     fun();
+//     fun();
+// }
+
+// call3Times(fun);
+
+function callNTimes(times, fun) {
+    for (i=0; i < times; i++) {
+        fun();
+    }
 }
 
-call3Times(fun);
+console.log(callNTimes(6, fun));
