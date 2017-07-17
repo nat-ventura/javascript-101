@@ -28,14 +28,28 @@ function coolCities(cityArray) {
     });
 }
 
-function isCool(temp) {
-    return temp < 70;
-
-    function isCoolerThan(threshold) {
-        return function(temp) {
-            return temp < threshold;
-        }
+function get(propName) {
+    return function (obj) {
+        return obj[propName];
     }
 }
 
+var getTemp = get('temperature');
+
+function isCoolerThan(threshold) {
+    return function(temp) {
+        return temp < threshold;
+        }
+    }
+
+// note that it's helpful to include an object's type in their variable names
+
+// function isCool(temp) {
+//     return temp < 70;
+
+
 var lessThan70 = isCoolerThan(70);
+
+function cityName(cityArray) {
+    return cityArray.map(get('name'));
+}
