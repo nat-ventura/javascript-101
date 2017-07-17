@@ -84,7 +84,7 @@ function strJoin(strs, sep) {
 
 // OR
 
-function strJoin(strs, sep) {
+function strJoin2(strs, sep) {
     return strs.reduce(function (tally, str) {
         return tally + sep + str;
     });
