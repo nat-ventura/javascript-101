@@ -55,37 +55,66 @@
 // }
 
 
-function calculateProduct(runningTotal, currentElement) {
-    console.log('runningTotal: ' + runningTotal + ', currentElement:' + currentElement);
-    return runningTotal * currentElement;
+// function calculateProduct(runningTotal, currentElement) {
+//     console.log('runningTotal: ' + runningTotal + ', currentElement:' + currentElement);
+//     return runningTotal * currentElement;
+// }
+
+// function product(numArray) {
+//     return numArray.reduce(calculateProduct, 1);
+// }
+
+// console.log(product([1, 2, 3, 4, 5]));
+
+// function total(productArray, fn, starter) {
+//     return productArray.reduce(function (tally, current) {
+//         return tally + current['price'];
+//     })
+// }
+
+// function strJoin(strs, sep) {
+//     return strs.reduce(function (tally, str) {
+//         if (tally == '') {
+//             return str;
+//         } else {
+//             return tally + sep + str;
+//         }
+//     }, '');
+// }
+
+// // OR
+
+// function strJoin2(strs, sep) {
+//     return strs.reduce(function (tally, str) {
+//         return tally + sep + str;
+//     });
+// }
+
+function sortAlpha(arrayOfStrings) {
+    return arrayOfStrings.sort();
 }
 
-function product(numArray) {
-    return numArray.reduce(calculateProduct, 1);
+function numberComparator(a, b) {
+    var result = 0;
+    if (a < b) {
+        result = -1;
+    } else if (a > b) {
+        result = 1;
+    }
+
+    return result;
 }
 
-console.log(product([1, 2, 3, 4, 5]));
-
-function total(productArray, fn, starter) {
-    return productArray.reduce(function (tally, current) {
-        return tally + current['price'];
-    })
+function sortNumbers(arrayOfNums) {
+    return arrayOfNums.sort(numberComparator);
 }
 
-function strJoin(strs, sep) {
-    return strs.reduce(function (tally, str) {
-        if (tally == '') {
-            return str;
-        } else {
-            return tally + sep + str;
-        }
-    }, '');
-}
-
-// OR
-
-function strJoin2(strs, sep) {
-    return strs.reduce(function (tally, str) {
-        return tally + sep + str;
+function sortByLength(arrayOfString) {
+    return arrayOfString.sort(function (a, b) {
+        return numberComparator(a.length, b.length);
     });
+    // the numbers go from smallest to largest
+    // the numbers that you want to compare are the lengths of the strings
+    // if you changes the order of the arguments, the longest names will
+    // appear first
 }
