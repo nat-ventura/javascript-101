@@ -51,7 +51,7 @@
 
 // console.log(wordHistogram("banana keys banana boat"));
 
-var nums = [-1,2,-3,-4,5,-6,7,-8,-9,-10];
+// var nums = [-1,2,-3,-4,5,-6,7,-8,-9,-10];
 
 // var positivos = nums.filter(function(num) {
 //     if (num > 0) {
