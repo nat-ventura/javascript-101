@@ -27,17 +27,12 @@ function total(productArray, fn, starter) {
 
 console.log(total(products));
 
-// CHRIS EXAMPLE BUTTONS
+// STRING JOIN
 
-var buttons = {
-    scale: document.querySelector('[data-toggle-scale]'),
-    rotate: document.querySelector('[data-toggle-rotate]')
-};
+function strJoin(stringArray, sep) {
+    return stringArray.reduce(function (accumulator, string) {
+        return accumulator + sep + string;
+    });
+}
 
-var target = document.querySelector('[data-target]');
-
-Object.keys(buttons).forEach(function (k) {
-    buttons[k].addEventListener('click', function () {
-        target.classList.toggle(k);
-    })
-})
+console.log(strJoin(['Hello', 'and', 'goodbye'], ' '));
