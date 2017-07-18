@@ -19,4 +19,25 @@ var products = [
     { name: 'Tennis Balls', price: 9.00 }
 ];
 
-products.reduce( function(acc))
+function total(productArray, fn, starter) {
+    return productArray.reduce(function (tally, current) {
+        return tally + current['price'];
+    }, 0);
+}
+
+console.log(total(products));
+
+// CHRIS EXAMPLE BUTTONS
+
+var buttons = {
+    scale: document.querySelector('[data-toggle-scale]'),
+    rotate: document.querySelector('[data-toggle-rotate]')
+};
+
+var target = document.querySelector('[data-target]');
+
+Object.keys(buttons).forEach(function (k) {
+    buttons[k].addEventListener('click', function () {
+        target.classList.toggle(k);
+    })
+})
