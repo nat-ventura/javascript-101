@@ -48,3 +48,7 @@ function acronym (wordArray) {
 }
 
 console.log(acronym(['dog','over','golf']));
+
+// omg it totally worked, i just didn't realize it
+// because dog was both the first word and the acronym
+// print statements are my savior
