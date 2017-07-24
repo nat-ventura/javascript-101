@@ -41,8 +41,10 @@ console.log(strJoin(['Hello', 'and', 'goodbye'], ' '));
 
 function acronym (wordArray) {
     return wordArray.reduce( function (accumulator, current) {
+        console.log(current);
+        console.log(current[0]);
         return accumulator + current[0];
-    }, 0);
+    }, "");
 }
 
 console.log(acronym(['dog','over','golf']));
